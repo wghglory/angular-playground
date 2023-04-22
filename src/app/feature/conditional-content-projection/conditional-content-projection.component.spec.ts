@@ -8,7 +8,7 @@ describe('ConditionalContentProjectionComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ConditionalContentProjectionComponent],
+      imports: [ConditionalContentProjectionComponent],
     });
     fixture = TestBed.createComponent(ConditionalContentProjectionComponent);
     component = fixture.componentInstance;

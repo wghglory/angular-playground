@@ -1,28 +1,23 @@
-<h2>
-  <a href="https://angular.io/guide/content-projection#conditional-content-projection">Conditional Content
-    Projection</a>
-</h2>
+<h1>
+  <a href="https://angular.io/guide/content-projection#conditional-content-projection">Conditional Content Projection</a>
+</h1>
 
 <article>
   <p>
-    If your component needs to <em>conditionally</em> render content, or render content multiple times, you should
-    configure that component
+    If your component needs to <em>conditionally</em> render content, or render content multiple times, you should configure that component
     to accept an <code>&lt;ng-template&gt;</code> element that contains the content you want to conditionally render.
   </p>
 
   <p>
-    Using an <code>&lt;ng-content&gt;</code> element in these cases is not recommended, because when the consumer of a
-    component supplies
+    Using an <code>&lt;ng-content&gt;</code> element in these cases is not recommended, because when the consumer of a component supplies
     the content, that content is <em>always</em> initialized, even if the component does not define an
     <code>&lt;ng-content&gt;</code> element or if that <code>&lt;ng-content&gt;</code> element is inside of an <code>ngIf</code>
     statement.
   </p>
 
   <p>
-    With an <code>&lt;ng-template&gt;</code> element, you can have your component explicitly render content based on any
-    condition you want,
-    as many times as you want. Angular will not initialize the content of an <code>&lt;ng-template&gt;</code> element
-    until that element is
+    With an <code>&lt;ng-template&gt;</code> element, you can have your component explicitly render content based on any condition you want,
+    as many times as you want. Angular will not initialize the content of an <code>&lt;ng-template&gt;</code> element until that element is
     explicitly rendered.
   </p>
 </article>
