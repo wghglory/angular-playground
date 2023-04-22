@@ -3,16 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ConditionalContentProjectionComponent } from './conditional-content-projection/conditional-content-projection.component';
+import { NotFoundComponent } from './shared/ui/not-found/not-found.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, ConditionalContentProjectionComponent],
+  imports: [BrowserModule, AppRoutingModule, NotFoundComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
