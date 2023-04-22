@@ -10,13 +10,7 @@ import { NotFoundComponent } from './shared/ui/not-found/not-found.component';
 
 @NgModule({
   declarations: [AppComponent, ConditionalContentProjectionComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    ClarityModule,
-    NotFoundComponent,
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, ClarityModule, NotFoundComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

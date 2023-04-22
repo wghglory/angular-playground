@@ -2,22 +2,19 @@
 // since clarity base is 20px, not 16px...
 const baseFontSize = 20;
 
-const convert = (value) => {
-  return (16 * value) / baseFontSize + "rem";
+const convert = value => {
+  return (16 * value) / baseFontSize + 'rem';
 };
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+  content: ['./src/**/*.{html,ts}'],
   theme: {
     extend: {
       spacing: () => ({
         ...Array.from({ length: 96 }, (_, index) => index * 0.5)
-          .filter((i) => i)
-          .reduce(
-            (acc, i) => ({ ...acc, [i]: `${i / (baseFontSize / 4)}rem` }),
-            {}
-          ),
+          .filter(i => i)
+          .reduce((acc, i) => ({ ...acc, [i]: `${i / (baseFontSize / 4)}rem` }), {}),
       }),
       fontSize: {
         xs: [
@@ -50,49 +47,49 @@ module.exports = {
             lineHeight: `${convert(1.75)}` /* 28px */,
           },
         ],
-        "2xl": [
+        '2xl': [
           `${convert(1.5)}` /* 24px */,
           {
             lineHeight: `${convert(2)}` /* 32px */,
           },
         ],
-        "3xl": [
+        '3xl': [
           `${convert(1.875)}` /* 30px */,
           {
             lineHeight: `${convert(2.25)}` /* 36px */,
           },
         ],
-        "4xl": [
+        '4xl': [
           `${convert(2.25)}` /* 36px */,
           {
             lineHeight: `${convert(2.5)}` /* 40px */,
           },
         ],
-        "5xl": [
+        '5xl': [
           `${convert(3)}` /* 48px */,
           {
             lineHeight: `${convert(1)}`,
           },
         ],
-        "6xl": [
+        '6xl': [
           `${convert(3.75)}` /* 60px */,
           {
             lineHeight: `${convert(1)}`,
           },
         ],
-        "7xl": [
+        '7xl': [
           `${convert(4.5)}` /* 72px */,
           {
             lineHeight: `${convert(1)}`,
           },
         ],
-        "8xl": [
+        '8xl': [
           `${convert(6)}` /* 96px */,
           {
             lineHeight: `${convert(1)}`,
           },
         ],
-        "9xl": [
+        '9xl': [
           `${convert(8)}` /* 128px */,
           {
             lineHeight: `${convert(1)}`,
@@ -115,26 +112,26 @@ module.exports = {
         md: `${convert(0.375)}` /* 6px */,
         lg: `${convert(0.5)}` /* 8px */,
         xl: `${convert(0.75)}` /* 12px */,
-        "2xl": `${convert(1)}` /* 16px */,
-        "3xl": `${convert(1.5)}` /* 24px */,
+        '2xl': `${convert(1)}` /* 16px */,
+        '3xl': `${convert(1.5)}` /* 24px */,
       },
-      minWidth: (theme) => ({
-        ...theme("spacing"),
+      minWidth: theme => ({
+        ...theme('spacing'),
       }),
-      maxWidth: (theme) => ({
-        ...theme("spacing"),
-        0: "0rem",
+      maxWidth: theme => ({
+        ...theme('spacing'),
+        0: '0rem',
         xs: `${convert(20)}` /* 320px */,
         sm: `${convert(24)}` /* 384px */,
         md: `${convert(28)}` /* 448px */,
         lg: `${convert(32)}` /* 512px */,
         xl: `${convert(36)}` /* 576px */,
-        "2xl": `${convert(42)}` /* 672px */,
-        "3xl": `${convert(48)}` /* 768px */,
-        "4xl": `${convert(56)}` /* 896px */,
-        "5xl": `${convert(64)}` /* 1024px */,
-        "6xl": `${convert(72)}` /* 1152px */,
-        "7xl": `${convert(80)}` /* 1280px */,
+        '2xl': `${convert(42)}` /* 672px */,
+        '3xl': `${convert(48)}` /* 768px */,
+        '4xl': `${convert(56)}` /* 896px */,
+        '5xl': `${convert(64)}` /* 1024px */,
+        '6xl': `${convert(72)}` /* 1152px */,
+        '7xl': `${convert(80)}` /* 1280px */,
       }),
     },
   },
