@@ -1,0 +1,7 @@
+<ng-content></ng-content>
+<div *ngIf="expanded">
+  <!-- You can apply an ngTemplateOutlet directive to any type of element. This example assigns the directive to an <ng-container> element because the component does not need to render a real DOM element. -->
+  <ng-container [ngTemplateOutlet]="content.templateRef"></ng-container>
+</div>
+
+<ng-content select="[question]"></ng-content>
